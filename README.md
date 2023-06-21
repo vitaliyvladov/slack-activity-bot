@@ -7,7 +7,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/vitalii-vladov-65473511a/]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <div>
 <h3 align="center">Slack users activity bot</h3>
@@ -27,8 +27,6 @@ The bot, which requests the activity of each Slack user every 5 minutes (the tim
 - How many times its activity was recorded.
 - Daytime hours when the user was active
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -42,31 +40,32 @@ How to install and use.
 6. Create tables in the database using the following migration from the create_db.sql file
 7. Make a separate screen and run tg_bot_asker.py in it
 8. Set up the following tasks in the scheduler:
-  - python3 your_path/save_users_to_bd.py. //Save to the database once a day
-  - python3 your_path/receive_activity_and_write_to_db.py. //Get active users and write to the database. Every 5 minutes
-  - python3 your_path/send_activity_report_to_telegram.py yesterday. //Sends data for yesterday to telegram every day
-  - python3 your_path/db_cleaner.py //Move data to backup table. Once a week, at a different time than other schedulers.
-
+  - python3 your_path/save_users_to_bd.py. _//Save to the database once a day_
+  - python3 your_path/receive_activity_and_write_to_db.py. _//Get active users and write to the database. Every 5 minutes_
+  - python3 your_path/send_activity_report_to_telegram.py yesterday. _//Sends data for yesterday to telegram every day_
+  - python3 your_path/db_cleaner.py _//Move data to backup table. Once a week, at a different time than other schedulers.
+_
 How it works.
-1. The script save_users_to_bd.py gets users from Slack, connects to the MySQL database and saves all users there that are not bots and not deleted.
-2. The receive_activity_and_write_to_db.py script receives user activity in Slack and writes the activity time to the MySQL database.
-3. The send_activity_report_to_telegram.py script selects data from the database on request with a period and sends a report to the telegram channel.
-4. The db_cleaner.py script copies the data from the main table to the backup table and deletes the data from the main table.
-5. The tg_bot_asker.py script allows you to request statistics from the bot's telegrams at any time.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+1. The **script save_users_to_bd.py** gets users from Slack, connects to the MySQL database and saves all users there that are not bots and not deleted.
+2. The **receive_activity_and_write_to_db.py** script receives user activity in Slack and writes the activity time to the MySQL database.
+3. The **send_activity_report_to_telegram.py** script selects data from the database on request with a period and sends a report to the telegram channel.
+4. The **db_cleaner.py** script copies the data from the main table to the backup table and deletes the data from the main table.
+5. The **tg_bot_asker.py** script allows you to request statistics from the bot's telegrams at any time.
 
 <!-- USAGE EXAMPLES -->
 ## Settings and how it works
 
 With this bot, I can see who starts the working day at what time. 
+
 I see the time of the first Slack for today. 
+
 Also, in the next column, I see the date and time of the user's last activity in Slack, even if it was not today. This allows you to understand, for example, that a person worked until night and you must say "thank you" to him. Or vice versa, has not entered the slack for a couple of days. 
+
 The next column shows how many total user activities were recorded in slack for the specified period. User activity is recorded every five minutes, this indicator allows you to understand how active he is. 
+
 The last column indicates the hours of the day when this user's activity was recorded. This indicator allows you to see, for example, those remote employees who leave the computer for 2-3 hours at lunchtime.
 
 DO NOT USE THIS BOT FOR ANY MANAGEMENT DECISIONS OR FOR MICROMANAGEMENT. THIS BOT IS DESIGNED TO OBTAIN ADDITIONAL INFORMATION, BUT NOT TO USE IT AGAINST COLLEAGUES.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- LICENSE -->
@@ -74,15 +73,11 @@ DO NOT USE THIS BOT FOR ANY MANAGEMENT DECISIONS OR FOR MICROMANAGEMENT. THIS BO
 
 Distributed under the MIT License.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTACT -->
 ## Contact
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/vitalii-vladov-65473511a/]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
