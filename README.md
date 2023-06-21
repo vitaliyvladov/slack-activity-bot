@@ -19,18 +19,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 The bot, which requests the activity of each Slack user every 5 minutes (the time can be changed), writes the information to the database and then sends the following information about the user to the telegram channel via the cron:
 - When the user appeared in Slack for the first time in a day
 - When was the last time that day appeared in slack.
 - How many times its activity was recorded.
 - Daytime hours when the user was active
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-How to install and use.
+![Product Name Screen Shot][product-screenshot]
+<!-- HOW TO INSTALL AND USE -->
+## How to install and use
 
 1. First you need to copy all the files to your server.
 2. Install the dependencies specified in the requirements.txt file
@@ -86,6 +83,7 @@ Distributed under the MIT License.
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/vitalii-vladov-65473511a/
+[product-screenshot]: slack_activity.png
 Footer
 © 2023 GitHub, Inc.
 Footer navigation
